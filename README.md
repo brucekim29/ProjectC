@@ -1,16 +1,34 @@
-# final-projectC
-projectC is video analysis application using artificial neural network. use this application you can easily search car type and color that you want to search in videos
-projectC neural models is located another repository in https://github.com/hankug1234/models
-if you test this application must download models and locate each models in
+# ProjectC
+인공 신경망을 이용하여 영상속에서 원하는 차량의 유형 및 색상을 쉽게 검색할 수 있습니다.
+해당 모델 검색 및 활용 , 백앤드 개발
 
-projectCServer/modelCollection/pmg/ -> carType.pth
-projectCServer/modelCollection/tensorflowModels/ -> color.h5
-projectCServer/modelCollection/yolo/ -> yolov5l.pth
+# 제작기간 & 참여인원
+- 2022년 11월 22일 ~ 2023년 1월 12일
+- 팀프로젝트
 
-cartype.pth is pmgnet that was achived sota for stanford car type benchmark and it is pre trained our own 6 car type dataset ["bus","compact","sedan","suv","truck","van"]
-color.h5 was pre trained by mobile net and it can classify 7 car color ["black", "blue", "green","red","silver","white","yellow"]
-yolo5l.pth is pre trained yolov5 model
-<br/>
-<br/>
-if you see more detail aboud our project please check issues and download .mp4 .pdf file<br/>
-our server test environment was RTX3080 one GPU<br/>
+# 사용 기술
+Back end
+- Python
+- Spring Boot
+- Java 11
+- MySQL
+
+Front end
+- HTML
+- CSS
+
+
+# 트러블 슈팅 ()
+- 초기 계획 수립에 있어서 개개인의 능력이 서로 다르고 이해못하는 부분들이 진행하기에 어려운 부분이 많았음
+- 개인별로 범위륾 맡아서 선행 학습주도후 회의를 통해서 서로 지식교환으로 보충할수있었음
+- 처음엔 팀원들간에 의사소통이 잘 이루어 졌지만 마지막으로 갈수록 의사소통이 어려워졌음
+- 어려워진 의사소통을 해결하기위해서 많은 대화, 회의가 필요하고 진행시 유의할점
+- 더 많은 회의를 통해서 서로간의 의견을 좁혀가는것이 먼저 필요하고 개선해야할 방안임
+- 초기 회의록 대로의 진행방향에 있어 모델 학습후 적용시에 발생되는 문제들을 사전에 체크하지 못함
+- 인공신경망을 이용한 이미지 분류의 관련된 논문으로 확인하고 실제로 적용할때에 데이터의 정형화를 제대로 인지 못함
+- 데이터를 다시 라벨링을 진행하고 더 많은 데이터를 수집하여 모델의 학습으로 진행할수 있었음
+- 논문의 내용과 정형화로 이루어진 데이터 모델만 확인하고 여러가지 모델을 프로젝트 진행 초에 실험해보지 못하여 정확도의 문제가 생긴후 진행이 어려워졌음
+- 추후 다른 모델들을 빠르게 학습시키는 방법으로 진행하고 분류 모델 관련하여 많은 테스트를 통해서 극복할수 있었음
+- 실제 모델을 삽입하여 실시간으로 영상 분석시 색상을 제대로 인지하지 못해서 많은 시간을 투여하게 되었음
+- 색상 문제 해결을 위해서 여러 논문들과 데이터 전처리를 여러 방법으로 진행후 학습하고 OpenCV 색상 인식 으로 생겨날수있는 문제들을 차례대로 해결해나감
+
